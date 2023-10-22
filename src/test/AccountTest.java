@@ -22,5 +22,15 @@ public class AccountTest {
         if (account.getBalance() != 10000) {
             fail();
         }
+
+        account = new Account(1000);
+        if (account.getBalance() != 1000) {
+            fail(); //오류 발생
+        }
+
+        account = new Account(0);
+        if (account.getBalance() != 0) {
+            fail();
+        }
     }
 }
